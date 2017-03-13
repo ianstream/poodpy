@@ -2,12 +2,12 @@
 chainring = 52                    # number of teeth
 cog = 11
 ratio = chainring / float(cog)
-print ratio                        # -> 4.72727272727
+print(ratio)                        # -> 4.72727272727
 
 chainring = 30
 cog = 27
 ratio = chainring / float(cog)
-print ratio                        # -> 1.11111111111111
+print(ratio)                        # -> 1.11111111111111
 
 ############## Page 19 ##############
 
@@ -28,8 +28,8 @@ class Gear(object):
     def cog(self):
         return self.__cog
 
-print Gear(52, 11).ratio()        # -> 4.72727272727273
-print Gear(30, 27).ratio()        # -> 1.11111111111111
+print(Gear(52, 11).ratio())        # -> 4.72727272727273
+print(Gear(30, 27).ratio())        # -> 1.11111111111111
 
 ############## Page 20 ##############
 
@@ -65,16 +65,16 @@ class Gear(object):
         return self.__tire
 
 
-print Gear(52, 11, 26, 1.5).gear_inches()
+print(Gear(52, 11, 26, 1.5).gear_inches())
 # -> 137.090909090909
 
-print Gear(52, 11, 24, 1.25).gear_inches()
+print(Gear(52, 11, 24, 1.25).gear_inches())
 # -> 125.272727272727
 
 ############## Page 20 ##############
 
 
-print Gear(52, 11).ratio()  # didn't this used to work?
+print(Gear(52, 11).ratio())  # didn't this used to work?
 #  Traceback (most recent call last):
 #  File "<stdin>", line 1, in <module>
 #  TypeError: __init__() takes exactly 5 arguments (3 given)
@@ -272,11 +272,11 @@ class Wheel(object):
 
 
 wheel = Wheel(26, 1.5)
-print wheel.circumference()
+print(wheel.circumference())
 # -> 91.106186954104
 
-print Gear(52, 11, wheel).gear_inches()
+print(Gear(52, 11, wheel).gear_inches())
 # -> 137.090909090909
 
-print Gear(52, 11).ratio()
+print(Gear(52, 11).ratio())
 # -> 4.72727272727273
